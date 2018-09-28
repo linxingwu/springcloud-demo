@@ -6,7 +6,10 @@
     <groupId>com.linxingwu</groupId>
     <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>../api</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>provider</name>
     <description>Demo project for Spring Boot</description>
@@ -31,14 +34,25 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.linxingwu</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
 

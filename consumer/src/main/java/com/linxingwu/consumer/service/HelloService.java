@@ -1,22 +1,12 @@
 package com.linxingwu.consumer.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Service
-public class HelloService {
-    @Autowired
-    RestTemplate restTemplate;
+@Deprecated
+@FeignClient("hello-service")
+public interface HelloService {
 
-    @HystrixCommand(fallbackMethod = "helloFallback")
-    public String helloService(){
-        return restTemplate.getForEntity("http://hello-service/hello", String.class).getBody();
-    }
-
-    public String helloFallback(){
-        return "this is fallback";
-    }
-
+    @RequestMapping("/hello")
+    String hello();
 }
