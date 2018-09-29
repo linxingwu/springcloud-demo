@@ -6,10 +6,7 @@
     <groupId>com.linxingwu</groupId>
     <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <modules>
-        <module>../api</module>
-    </modules>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>provider</name>
     <description>Demo project for Spring Boot</description>
