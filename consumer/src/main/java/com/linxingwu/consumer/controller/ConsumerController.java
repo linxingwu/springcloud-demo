@@ -15,7 +15,7 @@ public class ConsumerController {
     public String helloConsumer() {
         StringBuffer sb = new StringBuffer();
         sb.append(service.hello("张三")).append("\n");
-        sb.append(service.hello("李四",20)).append("\n");
+        sb.append(service.hello("lisi",20)).append("\n");
         sb.append(service.hello(new User("王五",25))).append("\n");
 
 

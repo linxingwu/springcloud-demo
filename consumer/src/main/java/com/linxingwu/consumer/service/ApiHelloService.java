@@ -3,6 +3,6 @@ package com.linxingwu.consumer.service;
 import com.linxingwu.service.HelloService;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient(value="provider-demo")
+@FeignClient(value="hello-service")
 public interface ApiHelloService extends HelloService {
 }
