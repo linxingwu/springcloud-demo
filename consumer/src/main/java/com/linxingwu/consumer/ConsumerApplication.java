@@ -1,5 +1,6 @@
 package com.linxingwu.consumer;
 
+import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -16,6 +17,11 @@ public class ConsumerApplication {
     @LoadBalanced
     RestTemplate restTemplate(){
         return new RestTemplate();
+    }
+
+    @Bean
+    Logger.Level feignLoggerLevel(){
+        return Logger.Level.FULL;
     }
 
     public static void main(String[] args) {
