@@ -1,2 +1,2 @@
 # springcloud-demo
-springcloud入门级学习项目
+springcloud入门学习项目
