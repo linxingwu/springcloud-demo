@@ -13,3 +13,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
+
+
+debug: true
+
+health:
+  config:
+    enabled: true
