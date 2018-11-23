@@ -3,7 +3,9 @@ spring:
     name: gateway
   cloud:
     config:
-      uri: http://localhost:7001/
+      discovery:
+        enabled: true
+        service-id: config
 
 
 server:
@@ -13,10 +15,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
-
-
-debug: true
-
-health:
-  config:
-    enabled: true
