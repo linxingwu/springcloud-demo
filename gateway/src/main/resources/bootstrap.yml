@@ -20,4 +20,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
+        include: routes,refresh  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
+
+zuul:
+  filter:
+    root: ${spring.application.name}/src/main/java/groovy/filter #动态路由不好解决路径，暂时这样写
+    interval: 5

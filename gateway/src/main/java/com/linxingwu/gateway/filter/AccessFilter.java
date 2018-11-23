@@ -9,6 +9,8 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 import javax.servlet.http.HttpServletRequest;
 
+import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_DECORATION_FILTER_ORDER;
+
 
 public class AccessFilter extends ZuulFilter {
 
@@ -20,7 +22,7 @@ public class AccessFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return 0;
+        return PRE_DECORATION_FILTER_ORDER - 1;
     }
 
     @Override
