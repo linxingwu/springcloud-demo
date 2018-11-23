@@ -15,3 +15,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
