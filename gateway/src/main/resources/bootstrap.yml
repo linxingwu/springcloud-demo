@@ -6,6 +6,16 @@ spring:
       discovery:
         enabled: true
         service-id: config
+      fail-fast: true
+      retry:
+        multiplier: 1.1
+        initial-interval: 1000
+        max-interval: 2000
+        max-attempts: 10
+#  security:
+#    user:
+#      name: user
+#      password: admin
 
 
 server:
@@ -20,9 +30,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: routes,refresh  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
+        include: routes,refresh,health  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
 
 zuul:
   filter:
     root: ${spring.application.name}/src/main/java/groovy/filter #动态路由不好解决路径，暂时这样写
+#    root: classpath:/src/main/java/groovy/filter
     interval: 5
