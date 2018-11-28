@@ -43,5 +43,6 @@
         <module>eureka-server</module>
         <module>gateway</module>
         <module>provider</module>
+        <module>stream</module>
     </modules>
 </project>

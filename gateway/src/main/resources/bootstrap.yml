@@ -12,6 +12,11 @@ spring:
         initial-interval: 1000
         max-interval: 2000
         max-attempts: 10
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: springcloud
 #  security:
 #    user:
 #      name: user
@@ -30,7 +35,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: routes,refresh,health  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
+        include: '*'  #必须加上这个配置，才能通过 post /actuator/refresh 重新读取配置文件
 
 zuul:
   filter:

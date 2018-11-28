@@ -11,8 +11,12 @@ spring:
           basedir: /Users/linxingwu/gitRepository/config-repo  #本地仓库地址
         health:
           repositories:
-            check:
-              name: config-repo
+            config:
+              check:
+                name: config-repo
+    bus:
+      trace:
+        enabled: true
 #  security:
 #    user:
 #      name: user
