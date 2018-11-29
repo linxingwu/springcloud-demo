@@ -5,8 +5,9 @@ import org.springframework.messaging.MessageChannel;
 
 public interface SinkSender {
     String INPUT = "inputMessage";
+    String OUTPUT = "outputMessage";
 
-    @Output
+    @Output(OUTPUT)
     MessageChannel output();
 
 

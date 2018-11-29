@@ -14,6 +14,10 @@ import org.springframework.messaging.support.GenericMessage;
 
 import java.util.Date;
 
+/**
+ * 本类首先向mq中发消息（通过output binder），同时监听另一个binder（input）
+ */
+
 @EnableBinding({Processor.class})
 public class SinkProcessor {
     private static Logger logger = LoggerFactory.getLogger(SinkProcessor.class);
