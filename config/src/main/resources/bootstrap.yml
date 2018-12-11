@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/null_713_3565/config-repo.git
+          uri: https://gitee.com/linxingwucode/config-repo.git
           skip-ssl-validation: true
           timeout: 5
           basedir: /Users/linxingwu/gitRepository/config-repo  #本地仓库地址
