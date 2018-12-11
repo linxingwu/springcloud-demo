@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/linxingwucode/config-repo.git
+          skip-ssl-validation: true
+          timeout: 5
+          basedir: /Users/linxingwu/gitRepository/config-repo  #本地仓库地址
+        health:
+          repositories:
+            config:
+              check:
+                name: config-repo
+    bus:
+      trace:
+        enabled: true
+#  security:
+#    user:
+#      name: user
+#      password: admin
+server:
+  port: 4444
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+encrypt:
+  key: admin
