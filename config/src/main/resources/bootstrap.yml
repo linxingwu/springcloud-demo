@@ -40,3 +40,5 @@ management:
 
 encrypt:
   key: admin
+
+debug: true
