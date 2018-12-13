@@ -17,17 +17,17 @@ spring:
     bus:
       trace:
         enabled: true
-#  security:
-#    user:
-#      name: user
-#      password: admin
+  security:
+    user:
+      name: config
+      password: admin
 server:
   port: 4444
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1111/eureka
+      defaultZone: http://user:admin@localhost:1111/eureka
 
 
 
