@@ -14,7 +14,7 @@ spring:
         max-attempts: 10
       username: config
       password: admin
-      uri: http://localhost:4444
+#      uri: http://localhost:4444
   rabbitmq:
     host: localhost
     port: 5672
