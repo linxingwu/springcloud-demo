@@ -25,5 +25,6 @@ class MyLoadBalancer extends DynamicServerListLoadBalancer{
     MyLoadBalancer(IClientConfig config, IRule rule, IPing ping, ServerList<Server> serverList, ServerListFilter<Server> serverListFilter, ServerListUpdater serverListUpdater) {
         super(config,rule,ping,serverList,serverListFilter,serverListUpdater);
     }
+    MyLoadBalancer(){}
 
 }
