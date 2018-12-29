@@ -28,7 +28,7 @@ public class ConsumerController {
         sb.append(service.hello(new User("王五",25))).append("\n");
 
 
-        return  sb.toString()+",from ribbon";
+        return  sb.toString()+",from feign";
     }
     @RequestMapping("/ribbon-consumer")
     public String ribbonConsumer() {
